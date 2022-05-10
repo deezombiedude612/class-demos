@@ -1,2 +1,3 @@
-# class-demos
-Class Demo Files for Reference
+# Class Demo Files for Reference
+
+Private repository to keep model files for class use.
