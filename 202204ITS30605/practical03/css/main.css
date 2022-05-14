@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+	--normal-text-size: 20px;
+	--h1-size: 48px;
+	--h2-size: 28px;
+	--input-size: 24px;
+	--theme-color: red;
+	--accent-color: maroon;
+}
+
+* {
+	font-family: "Urbanist", Arial, sans-serif;
+}
+
+body {
+	background-image: url("../images/taylors-bg.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: 1rem solid var(--theme-color);
+	margin: 0;
+	min-height: 100vh;
+}
+
+form {
+	background-color: rgba(255, 255, 255, .8);
+	padding: 2rem 0;
+}
+
+h1 {
+	font-size: var(--h1-size);
+}
+
+h2 {
+	font-size: var(--h2-size);
+}
+
+h3 {
+	font-size: var(--input-size);
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+tr, th, td {
+	border: 1px solid var(--accent-color);
+}
+
+/* Special division/sections */
+
+.center {
+	text-align: center;
+}
+
+.container {
+	width: 87.5%;
+	margin: 0 auto;
+	padding: 0 1.5rem 1.5rem;
+}
+
+#top-title img {
+	width: 40vw;
+	max-width: 600px;
+}
+
+.row section {
+	margin: 0 auto;
+}
+
+.radiogroup, .checkboxgroup {
+	font-size: var(--normal-text-size);
+	margin-top: .25rem;
+}
+
+#cgpa-table {
+	margin: 1.5rem auto;
+	width: 75%;
+}
+
+#cgpa-table tr th {
+	width: 75%;
+}
+
+#cgpa-table tr td {
+	text-align: center;
+}
+
+#cgpa-table tr td input[type="number"] {
+	width: 75%;
+	margin: .25rem auto;
+}
+
+#cgpa-table tfoot, #cgpa-table input {
+	text-align: right;
+}
+
+#actions {
+	margin-top: 1.5rem;
+}
+
+/* Input Elements */
+
+fieldset {
+	border-radius: 1rem;
+	border-color: var(--accent-color);
+}
+
+fieldset legend {
+	color: var(--accent-color);
+}
+
+input, select {
+	font-size: var(--input-size);
+	margin-bottom: .5rem;
+	padding: .25rem;
+}
+
+input:not([type="submit"], [type="reset"], [type="radio"], [type="checkbox"]),
+select,
+textarea {
+	width: 100%;
+}
+
+input[type="submit"],
+input[type="reset"] {
+	font-size: var(--normal-text-size);
+	margin: .5rem;
+	padding: .25rem .5rem;
+}
+
+input:hover,
+select:hover {
+	border-color: var(--theme-color);
+}
+
+option[disabled] {
+	color: darkgrey;
+}
+
+@media only screen and (min-width: 768px) {
+	.container {
+		width: 75%;
+		margin: 0 auto;
+	}
+
+	.row section.column-50 {
+		width: 49%;
+	}
+
+	.row .column-50:nth-of-type(odd) {
+		float: left;
+	}
+
+	.row .column-50:nth-of-type(even) {
+		float: right;
+	}
+}

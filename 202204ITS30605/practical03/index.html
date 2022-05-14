@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WP Practical 3</title>
+
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<form action="form-submitted.html" method="post">
+			<header class="center" id="top-title">
+				<img src="images/logo.png" alt="Taylor's Logo" />
+				<h1>Student Record Form</h1>
+			</header>
+			<!-- /header#top-title -->
+
+			<fieldset class="container" id="personal-particulars">
+				<legend>
+					<h2>Personal Particulars</h2>
+				</legend>
+
+				<section class="row">
+					<section class="column-50">
+						<label for="first-name">First Name</label><br />
+						<input type="text" name="first-name" id="first-name" placeholder="First Name" required autofocus />
+					</section>
+					<!-- /section.column-50 -->
+
+					<section class="column-50">
+						<label for="last-name">Last Name</label><br />
+						<input type="text" name="last-name" id="last-name" placeholder="Last Name" required />
+					</section>
+					<!-- /section.column-50 -->
+				</section>
+				<!-- section.row -->
+
+				<section class="row">
+					<section class="column-50">
+						<label for="student-id">Student ID</label><br />
+						<input
+							type="text"
+							name="student-id"
+							id="student-id"
+							placeholder="Student ID"
+							pattern="[0-9]{4}[a-z,A-Z]{1}[0-9]{5}|03[0-9]{5}"
+							required
+						/>
+						<!-- Use https://www.regexpal.com to craft regular expressions -->
+					</section>
+					<!-- /section.column-50 -->
+
+					<section class="column-50">
+						<label for="status">Status</label><br />
+						<select name="status" id="status">
+							<option disabled selected>Please select status</option>
+							<option value="active">Active</option>
+							<option value="deferred">Deferred</option>
+							<option value="graduated">Graduated</option>
+							<option value="terminated">Terminated</option>
+						</select>
+					</section>
+					<!-- /section.column-50 -->
+				</section>
+				<!-- section.row -->
+
+				<section class="row">
+					<label for="address">Home Address</label><br />
+					<input type="text" name="address" id="address" placeholder="Address" />
+				</section>
+				<!-- section.row -->
+
+				<section class="row">
+					<section class="column-50">
+						<label for="contact-no">Contact Number</label><br />
+						<input type="text" name="contact-no" id="contact-no" placeholder="Contact Number" />
+					</section>
+					<!-- /section.column-50 -->
+
+					<section class="column-50">
+						<label for="email">E-mail</label><br />
+						<input type="email" name="email" id="email" placeholder="E-mail" />
+					</section>
+					<!-- /section.column-50 -->
+				</section>
+				<!-- section.row -->
+			</fieldset>
+			<!-- /fieldset#personal-particulars -->
+
+			<fieldset class="container" id="academic-record">
+				<legend>
+					<h2>Academic Record</h2>
+				</legend>
+
+				<label for="program">Enrolled Program</label><br />
+				<select name="programme" id="programme">
+					<option disabled selected>Please select a program</option>
+					<option value="FIC">Foundation in Computing (FIC)</option>
+					<option value="DIT">Diploma in Information Technology</option>
+				</select>
+				<br />
+
+				<label for="intake">Semester Intake</label>
+				<section class="radiogroup" id="intake">
+					<input type="radio" name="intake" id="intake-jan22" value="jan22" />
+					<label for="intake-jan22">January 2022</label>
+
+					<input type="radio" name="intake" id="intake-apr22" value="apr22" />
+					<label for="intake-apr22">April 2022</label>
+
+					<input type="radio" name="intake" id="intake-aug22" value="aug22" />
+					<label for="intake-aug22">August 2022</label>
+				</section>
+				<!-- /section#intake -->
+
+				<table id="cgpa-table">
+					<thead>
+						<tr>
+							<th colspan="2">
+								<h3>Cumulative Grade Point Average (CGPA)</h3>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Semester 1</th>
+							<td><input type="number" name="sem1" id="sem1" min="0" max="4" /></td>
+						</tr>
+						<tr>
+							<th>Semester 2</th>
+							<td><input type="number" name="sem2" id="sem2" min="0" max="4" /></td>
+						</tr>
+						<tr>
+							<th>Semester 3</th>
+							<td><input type="number" name="sem3" id="sem3" min="0" max="4" /></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th>Cumulative Grade Point Average (CGPA)</th>
+							<td><input type="number" name="cgpa" id="cgpa" min="0" max="4" value="0.00" readonly /></td>
+						</tr>
+					</tfoot>
+				</table>
+			</fieldset>
+			<!-- /fieldset#academic-record -->
+
+			<fieldset class="container" id="academic-progression">
+				<legend>
+					<h2>Academic Progression</h2>
+				</legend>
+
+				<label for="progression-degree">Prospective Degree Options</label>
+				<section class="checkboxgroup">
+					<input type="checkbox" name="bcs" id="bcs" value="bcs" />
+					<label for="bcs">Bachelor of Computer Science (Hons)</label><br />
+					<input type="checkbox" name="bit" id="bit" value="bit" />
+					<label for="bit">Bachelor of Information Technology (Hons)</label><br />
+					<input type="checkbox" name="bse" id="bse" value="bse" />
+					<label for="bse">Bachelor of Software Engineering (Hons)</label><br />
+					<input type="checkbox" name="brdd" id="brdd" value="brdd" />
+					<label for="brdd">BSc (Hons) Robotic Design and Development</label><br /><br />
+				</section>
+				<!-- section.checkboxgroup -->
+
+				<label for="remarks">Remarks</label><br />
+				<textarea name="remarks" id="remarks" cols="50" rows="10"></textarea>
+			</fieldset>
+			<!-- /fieldset#academic-progression -->
+
+			<section class="center container" id="actions">
+				<input type="submit" value="Submit" />
+				<input type="reset" value="Reset" />
+			</section>
+			<!-- section#actions -->
+		</form>
+	</body>
+</html>
