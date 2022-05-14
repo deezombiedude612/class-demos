@@ -25,6 +25,7 @@ body {
 
 form {
 	background-color: rgba(255, 255, 255, .8);
+	/* min-height: 100vh; */
 	padding: 2rem 0;
 }
 
@@ -36,7 +37,7 @@ h2 {
 	font-size: var(--h2-size);
 }
 
-h3 {
+h3, p {
 	font-size: var(--input-size);
 }
 
@@ -118,14 +119,15 @@ input, select {
 	padding: .25rem;
 }
 
-input:not([type="submit"], [type="reset"], [type="radio"], [type="checkbox"]),
+input:not([type="submit"], [type="reset"], [type="radio"], [type="checkbox"], [type="button"]),
 select,
 textarea {
 	width: 100%;
 }
 
 input[type="submit"],
-input[type="reset"] {
+input[type="reset"],
+input[type="button"] {
 	font-size: var(--normal-text-size);
 	margin: .5rem;
 	padding: .25rem .5rem;
@@ -136,9 +138,17 @@ select:hover {
 	border-color: var(--theme-color);
 }
 
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	cursor: pointer;
+}
+
 option[disabled] {
 	color: darkgrey;
 }
+
+/* Extra styling for window sizes of larger widths */
 
 @media only screen and (min-width: 768px) {
 	.container {
