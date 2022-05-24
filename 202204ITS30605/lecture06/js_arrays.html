@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JavaScript Arrays</title>
+	</head>
+	<body>
+		<script>
+			// create an array
+			let students = ["Benjamin", "Terrence", "Harry", "Darrell", "Sanjiv"];
+			console.log(students);
+
+			// add a new student at the end of the array:
+			students.push("Kenneth");
+			console.log(students);
+			console.log(`students[1]: ${students[1]}`);
+			console.log(`Total number of students: ${students.length}`);
+
+			students.push("Zhe Hin", "Rowlet");
+			console.log(students);
+			console.log(`Total number of students: ${students.length}`);
+
+			// remove first student from the array
+			const popped_student = students.shift();
+			console.log(`Student popped from the array: ${popped_student}`);
+			console.log(`students[1]: ${students[1]}`);
+			const popped_student_2 = students.pop();
+			console.log(`Student popped from the array: ${popped_student_2}`);
+			console.log(students);
+
+			// splice() takes on at least 1 parameter:
+			// first parameter is from which index you wish to splice; this alone means splicing from that index to the end
+			// second optional parameter is how many you wish to splice. splice(2, 1) means splicing 1 element from the array starting from index 2
+			const spliced_student = students.splice(2, 1);
+			console.log(`Student spliced from the array: ${spliced_student}`);
+			console.log(students);
+		</script>
+	</body>
+</html>
