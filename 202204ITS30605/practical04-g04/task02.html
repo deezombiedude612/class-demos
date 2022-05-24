@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WP Practical 4 Task 2</title>
+	</head>
+	<body>
+		<script>
+			const RESPONSE = confirm("Select OK to proceed or Cancel to return.");
+
+			if (RESPONSE) {
+				alert("You may proceed.");
+				document.querySelector("body").innerHTML += "End of program.";
+			} else {
+				alert("You have chosen to cancel.");
+				document.querySelector("body").innerHTML += "Why you abort.";
+			}
+		</script>
+	</body>
+</html>
