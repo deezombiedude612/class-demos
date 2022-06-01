@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DOM 3</title>
+
+		<style>
+			input[type="text"] {
+				margin-bottom: 1rem;
+			}
+		</style>
+
+		<script src="dom3.js"></script>
+	</head>
+	<body>
+		<h1 id="message">Good morning!</h1>
+
+		<form action="." method="post" onsubmit="return toConfirm();">
+			Enter your name:
+			<input
+				type="text"
+				name="student_name"
+				id="student_name"
+				onchange="promptName();"
+				onmouseover="this.style.backgroundColor='yellow';"
+				onmouseout="this.style.backgroundColor='white';"
+			/>
+			<br />
+
+			<input type="button" value="Change Message" onclick="changeMessage();" />
+			<input type="submit" />
+		</form>
+	</body>
+</html>
