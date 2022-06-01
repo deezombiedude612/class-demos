@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mark Demo</title>
+
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style_input.css" />
+		<link rel="stylesheet" href="css/style_table.css" />
+	</head>
+	<body>
+		<section class="text-center">
+			<h1>Mark Demo</h1>
+		</section>
+		<!-- /section.text-center -->
+
+		<table>
+			<tr class="text-center">
+				<th>#</th>
+				<th>Asgn 1 [100%]</th>
+				<th>Asgn 2 [100%]</th>
+				<th>Asgn 1 [20 points]</th>
+				<th>Asgn 2 [30 points]</th>
+				<th>Total [50 points]</th>
+			</tr>
+			<tr>
+				<th>1</th>
+				<td><input type="number" name="stu1_asgn1" id="stu1_asgn1" /></td>
+				<td><input type="number" name="stu1_asgn2" id="stu1_asgn2" /></td>
+				<td><input type="number" name="stu1_asgn1_points" id="stu1_asgn1_points" readonly /></td>
+				<td><input type="number" name="stu1_asgn2_points" id="stu1_asgn2_points" readonly /></td>
+				<td><input type="number" name="stu1_total_points" id="stu1_total_points" readonly /></td>
+			</tr>
+			<tr>
+				<th>2</th>
+				<td><input type="number" name="stu2_asgn1" id="stu2_asgn1" /></td>
+				<td><input type="number" name="stu2_asgn2" id="stu2_asgn2" /></td>
+				<td><input type="number" name="stu2_asgn1_points" id="stu2_asgn1_points" readonly /></td>
+				<td><input type="number" name="stu2_asgn2_points" id="stu2_asgn2_points" readonly /></td>
+				<td><input type="number" name="stu2_total_points" id="stu2_total_points" readonly /></td>
+			</tr>
+			<tr>
+				<th>3</th>
+				<td><input type="number" name="stu3_asgn1" id="stu3_asgn1" /></td>
+				<td><input type="number" name="stu3_asgn2" id="stu3_asgn2" /></td>
+				<td><input type="number" name="stu3_asgn1_points" id="stu3_asgn1_points" readonly /></td>
+				<td><input type="number" name="stu3_asgn2_points" id="stu3_asgn2_points" readonly /></td>
+				<td><input type="number" name="stu3_total_points" id="stu3_total_points" readonly /></td>
+			</tr>
+			<tr>
+				<th colspan="3">Average</th>
+				<th><input type="number" name="avg1" id="avg1" readonly /></th>
+				<th><input type="number" name="avg2" id="avg2" readonly /></th>
+				<th><input type="number" name="avg_total" id="avg_total" readonly /></th>
+			</tr>
+		</table>
+
+		<hr />
+
+		<section class="text-center">
+			<button onclick="calculate();">Calculate Total and Average</button>
+		</section>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>

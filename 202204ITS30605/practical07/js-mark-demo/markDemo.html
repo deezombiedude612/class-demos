@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Mark Demo</title>
+
+		<style>
+			table {
+				border-collapse: collapse;
+			}
+
+			tr:not(:first-of-type):not(:last-of-type):hover {
+				background-color: greenyellow;
+			}
+
+			th,
+			td {
+				border: 1px solid black;
+				font-size: 16px;
+				padding: 5px 10px;
+			}
+
+			th {
+				background-color: grey;
+				color: white
+			}
+
+			input.input_silver {
+				background-color: silver;
+			}
+
+			input[type="button"] {
+				font-size: 20px;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<h1>Mark Demo</h1>
+
+		<table id="table">
+			<tr>
+				<th>#</th>
+				<th>Assignment 1 (100%)</th>
+				<th>Assignment 2 (100%)</th>
+				<th>Assignment 1 (20m)</th>
+				<th>Assignment 2 (30m)</th>
+				<th>Total (50m)</th>
+			</tr>
+			<tr>
+				<th>1</th>
+				<td><input type="number" name="stu1_asgn1" id="stu1_asgn1"></td>
+				<td><input type="number" name="stu1_asgn1" id="stu1_asgn2"></td>
+				<td><input type="number" name="stu1_m1" id="stu1_m1" class="input_silver"></td>
+				<td><input type="number" name="stu1_m2" id="stu1_m2" class="input_silver"></td>
+				<td><input type="number" name="stu1_total" id="stu1_total" class="input_silver"></td>
+			</tr>
+			<tr>
+				<th>2</th>
+				<td><input type="number" name="stu2_asgn1" id="stu2_asgn1"></td>
+				<td><input type="number" name="stu2_asgn2" id="stu2_asgn2"></td>
+				<td><input type="number" name="stu2_m1" id="stu2_m1" class="input_silver"></td>
+				<td><input type="number" name="stu2_m2" id="stu2_m2" class="input_silver"></td>
+				<td><input type="number" name="stu2_total" id="stu2_total" class="input_silver"></td>
+			</tr>
+			<tr>
+				<th>3</th>
+				<td><input type="number" name="stu3_asgn1" id="stu3_asgn1"></td>
+				<td><input type="number" name="stu3_asgn2" id="stu3_asgn2"></td>
+				<td><input type="number" name="stu3_m1" id="stu3_m1" class="input_silver"></td>
+				<td><input type="number" name="stu3_m2" id="stu3_m2" class="input_silver"></td>
+				<td><input type="number" name="stu3_total" id="stu3_total" class="input_silver"></td>
+			</tr>
+			<tr>
+				<th colspan="3">Average</th>
+				<th><input type="number" name="avg1" id="avg1" class="input_silver"></th>
+				<th><input type="number" name="avg2" id="avg2" class="input_silver"></th>
+				<th><input type="number" name="avg_total" id="avg_total" class="input_silver"></th>
+			</tr>
+		</table>
+
+		<hr>
+
+		<input type="button" value="Calculate Total and Average" onclick="calculate();">
+
+		<script>
+			function calculate() {
+				let asgn1_total = 0;
+				let asgn2_total = 0;
+				let grand_total = 0;
+
+				const numberOfStudents = 3;
+
+				for (let i = 1; i <= numberOfStudents; ++i) {
+					// calculate the marks from total percentage
+					document.getElementById("stu" + i + "_m1").value = (document.getElementById("stu" + i + "_asgn1").value * .2).toFixed(2);
+					document.getElementById("stu" + i + "_m2").value = (document.getElementById("stu" + i + "_asgn2").value * .3).toFixed(2);
+
+					// calculate total marks for given student
+					let stuTotal = parseFloat(document.getElementById("stu" + i + "_m1").value) + parseFloat(document.getElementById("stu" + i + "_m2").value);
+					document.getElementById("stu" + i + "_total").value = stuTotal.toFixed(2);
+
+					// add to respective totals
+					asgn1_total += parseFloat(document.getElementById("stu" + i + "_m1").value);
+					asgn2_total += parseFloat(document.getElementById("stu" + i + "_m2").value);
+					grand_total += parseFloat(document.getElementById("stu" + i + "_total").value);
+				}
+				// Note: use parseFloat() to get number with decimal places, and parseInt() to get Integer values (non-decimal)
+
+				// calculate average
+				const asgn1_avg = asgn1_total / numberOfStudents;
+				const asgn2_avg = asgn2_total / numberOfStudents;
+				const grand_avg = grand_total / numberOfStudents;
+
+				// assign average to correct input textfields
+				document.getElementById("avg1").value = asgn1_avg.toFixed(3);
+				document.getElementById("avg2").value = asgn2_avg.toFixed(3);
+				document.getElementById("avg_total").value = grand_avg.toFixed(3);
+
+				// note: toFixed(3) means 3 decimal places
+			}
+
+			// initialization: set all the grey input textfields to 2 decimal places
+			for (let i = 1; i <= 3; ++i) {
+				document.getElementById("stu" + i + "_m1").value = (0).toFixed(2);
+				document.getElementById("stu" + i + "_m2").value = (0).toFixed(2);
+				document.getElementById("stu" + i + "_total").value = (0).toFixed(2);
+			}
+			document.getElementById("avg1").value = (0).toFixed(2);
+			document.getElementById("avg2").value = (0).toFixed(2);
+			document.getElementById("avg_total").value = (0).toFixed(2);
+		</script>
+	</body>
+
+</html>
