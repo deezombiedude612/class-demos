@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WP Practical 5 Task 5</title>
+	</head>
+	<body>
+		<h1>BMI Calculator</h1>
+		<p>
+			Enter weight (in kg):
+			<input type="number" name="weight" id="weight" />
+		</p>
+		<p>
+			Enter height (in m):
+			<input type="number" name="height" id="height" />
+		</p>
+
+		<button onclick="calculateBMI();">Calculate BMI</button>
+
+		<p id="result"></p>
+
+		<script>
+			function isEmptyInput(inputElement) {
+				if (inputElement.value == "") return true;
+				return false;
+			}
+
+			function calculateBMI() {
+				const WEIGHT_INPUT = document.querySelector("input#weight");
+				const HEIGHT_INPUT = document.querySelector("input#height");
+
+				if (isEmptyInput(WEIGHT_INPUT) || isEmptyInput(HEIGHT_INPUT)) {
+					if (isEmptyInput(WEIGHT_INPUT)) {
+						alert("Weight input field is empty.");
+					}
+
+					if (isEmptyInput(HEIGHT_INPUT)) {
+						alert("Height input field is empty.");
+					}
+				} else {
+					let weight = parseFloat(WEIGHT_INPUT.value);
+					let height = parseFloat(HEIGHT_INPUT.value);
+
+					if (weight < 0 || height <= 0) {
+						if (weight < 0) {
+							alert("Weight cannot be negative!");
+							WEIGHT_INPUT.value = "";
+						} else if (height <= 0) {
+							alert("Height must be positive!");
+							HEIGHT_INPUT.value = "";
+						}
+					} else {
+						const BMI = weight / Math.pow(height, 2);
+						const RESULT_P = document.querySelector("p#result");
+
+						if (BMI < 18.5) RESULT_P.innerHTML = "Underweight";
+						else if (BMI < 25.0) RESULT_P.innerHTML = "Normal";
+						else if (BMI < 30.0) RESULT_P.innerHTML = "Overweight";
+						else RESULT_P.innerHTML = "Obese";
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
