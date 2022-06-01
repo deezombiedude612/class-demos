@@ -45,13 +45,15 @@ function calculate() {
 	const grand_avg = grand_total / NUMBER_OF_STUDENTS;
 
 	// assign average to correct input fields
-	document.querySelector(`#avg1`).value = asgn1_avg.toFixed(3);
-	document.querySelector(`#avg2`).value = asgn2_avg.toFixed(3);
-	document.querySelector(`#avg_total`).value = grand_avg.toFixed(3);
-	// Note: toFixed(3) sets number values to display 3 decimal places
+	document.querySelector(`#avg1`).value = asgn1_avg.toFixed(2);
+	document.querySelector(`#avg2`).value = asgn2_avg.toFixed(2);
+	document.querySelector(`#avg_total`).value = grand_avg.toFixed(2);
+	// Note: toFixed(2) sets number values to display 2 decimal places
 }
 
-window.onload = function() {
+function clearTable() {
 	document.querySelectorAll(`input:not(:read-only)`).forEach((inputField) => (inputField.value = "0"));
 	document.querySelectorAll(`input:read-only`).forEach((inputField) => (inputField.value = "0.00"));
-};
+}
+
+window.onload = clearTable();
