@@ -14,7 +14,13 @@
 			}
 
 			function circleArea(radius) {
-				return Math.PI * radius * radius;
+				// radius is a scalar value, should not be negative
+				// and there's no point calculating area of circle with radius 0
+				if (radius > 0) {
+					return Math.PI * radius * radius;
+				} else {
+					return 0;
+				}
 			}
 		</script>
 	</body>
