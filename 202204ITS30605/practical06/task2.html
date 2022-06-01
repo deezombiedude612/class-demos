@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WP Practical 6 Task 2</title>
+	</head>
+	<body>
+		<script>
+			function arrayFromRange(lower_bound, upper_bound) {
+				let number_array = [];
+
+				// if upper_bound > lower_bound
+				if (lower_bound > upper_bound) [lower_bound, upper_bound] = [upper_bound, lower_bound];
+
+				// if starting point (lower_bound) is not an integer, start from next integer
+				lower_bound = Math.ceil(lower_bound);
+
+				for (let i = lower_bound; i <= upper_bound; i++) {
+					number_array.push(i);
+				}
+
+				return number_array;
+			}
+		</script>
+	</body>
+</html>
