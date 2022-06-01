@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WP Practical 6 Challenge Task 1</title>
+
+		<script>
+			function showPrimes(limit) {
+				for (let number = 2; number <= limit; ++number) {
+					let isPrime = true; // acts as a flag to see if the number is prime or not
+					/* ---- CONTINUE CODE FROM HERE ---- */
+
+					for (let factor = 2; factor < number; ++factor) {
+						if (number % factor === 0) {
+							isPrime = false;
+							break;
+						}
+					}
+
+					if (isPrime) {
+						console.log(number);
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<script>
+			showPrimes(20);
+		</script>
+	</body>
+</html>
