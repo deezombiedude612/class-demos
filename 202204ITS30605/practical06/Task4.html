@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WP Practical 5 Task 4</title>
+	</head>
+	<body>
+		<script>
+			const YEAR = parseInt(prompt("Enter year."));
+
+			const REMAINDER = YEAR % 12;
+
+			switch (REMAINDER) {
+				case 0:
+					document.querySelector("body").innerHTML = "Monkey";
+					break;
+				case 1:
+					document.querySelector("body").innerHTML = "Rooster";
+					break;
+				case 2:
+					document.querySelector("body").innerHTML = "Dog";
+					break;
+				case 3:
+					document.querySelector("body").innerHTML = "Pig";
+					break;
+				case 4:
+					document.querySelector("body").innerHTML = "Rat";
+					break;
+				case 5:
+					document.querySelector("body").innerHTML = "Ox";
+					break;
+				case 6:
+					document.querySelector("body").innerHTML = "Tiger";
+					break;
+				case 7:
+					document.querySelector("body").innerHTML = "Rabbit";
+					break;
+				case 8:
+					document.querySelector("body").innerHTML = "Dragon";
+					break;
+				case 9:
+					document.querySelector("body").innerHTML = "Snake";
+					break;
+				case 10:
+					document.querySelector("body").innerHTML = "Horse";
+					break;
+				case 11:
+					document.querySelector("body").innerHTML = "Sheep";
+					break;
+
+				default:
+			}
+		</script>
+	</body>
+</html>
