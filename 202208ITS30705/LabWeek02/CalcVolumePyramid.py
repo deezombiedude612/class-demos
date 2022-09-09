@@ -14,4 +14,4 @@ else:
     print(
         f"The volume of a pyramid with length {length} units, width {width} units, and height {height} is {round(volume, 2)} cub. units")
 
-    # Caveat: This program will only show if the first of the three measurements are invalid.
+# Caveat: This program will only show if the first of the three measurements are invalid.
