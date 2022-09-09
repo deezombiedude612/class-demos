@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap");
+
+body {
+	background-image: url("sammy.png");
+	background-repeat: no-repeat;
+}
+
+p {
+	font-family: Roboto, sans-serif;
+}
+
+p::first-letter {
+	font-size: 250%;
+	font-weight: bold;
+}
+
+p::first-line {
+	font-style: italic;
+}
+
+::selection {
+	background-color: salmon;
+}
+
+h1::before {
+	content: "This is a ";
+	display: block;
+}
+
+p::after {
+	content: " END :) ";
+	background-color: orange;
+}

@@ -1,0 +1,19 @@
+#sec1 p {
+	color: orchid;
+}
+
+#sec1 > p {
+	text-decoration: underline;
+}
+
+#sec1 + p {
+	font-weight: bold;
+}
+
+#sec1 ~ p {
+	font-style: italic;
+}
+
+p.sans {
+	font-family: sans-serif;
+}

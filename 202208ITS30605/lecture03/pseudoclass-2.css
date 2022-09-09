@@ -1,0 +1,29 @@
+p:nth-of-type(even) {
+	font-weight: bold;
+}
+
+p:nth-of-type(odd) {
+	font-style: italic;
+}
+
+p:nth-last-of-type(2) {
+	text-decoration: underline;
+}
+
+p:not(:nth-of-type(2)) {
+	color: purple;
+}
+
+a:link {
+	color: orange;
+}
+
+a:visited {
+	color: seagreen;
+}
+
+a:hover,
+a:focus {
+	border: 1px solid black;
+	padding: 5px;
+}
