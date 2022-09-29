@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JS Loops</title>
+	</head>
+	<body>
+		<script>
+			let x = 5;
+
+			// while (x < 15) {
+			// 	console.log(`while Loop now at: ${x}`);
+			// 	x++;
+			// }
+
+			// for (x = 5; x < 15; x++) {
+			// 	console.log(`for Loop now at: ${x}`);
+			// }
+
+			const person = {
+				f_name: "Duchess",
+				l_name: "Sophia",
+				age: 18,
+			};
+
+			let txt = "";
+			for (let x in person) {
+				// x retrieves the key value
+				txt += person[x] + " ";
+			}
+
+			console.log(txt);
+		</script>
+	</body>
+</html>

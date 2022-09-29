@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JS Switch</title>
+	</head>
+	<body>
+		<input type="text" name="fruit" id="fruit" placeholder="Enter fruit." />
+		<button onclick="fruitColor();">Get Fruit Color</button>
+
+		<script>
+			function fruitColor() {
+				let fruit = document.querySelector("#fruit").value;
+				fruit = fruit.toLowerCase();
+
+				switch (fruit) {
+					case "apple":
+						alert("Red");
+						break;
+
+					case "lemon":
+						alert("Yellow");
+						break;
+
+					case "tangerine":
+					case "orange":
+						alert("Orange");
+						break;
+
+					case "grapes":
+						alert("Purple");
+						break;
+
+					default:
+						alert("Not sure.");
+				}
+			}
+		</script>
+	</body>
+</html>

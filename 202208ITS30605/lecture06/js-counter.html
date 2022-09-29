@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JS if-else</title>
+	</head>
+	<body>
+		<script>
+			let counter = 0;
+
+			function count() {
+				counter++;
+				document.querySelector("h1").innerHTML = counter;
+
+				if (counter > 10) {
+					alert(`Counted more than 10 times: ${counter}`);
+					document.querySelector("h1").style.color = "red";
+				} else if (counter > 5) {
+					alert(`Counted more than 5 times: ${counter}`);
+					document.querySelector("h1").style.color = "yellowgreen";
+				} else {
+					// alert(`Counter at: ${counter}`);
+					document.querySelector("h1").style.color = "violet";
+				}
+			}
+		</script>
+
+		<h1>0</h1>
+
+		<button onclick="count();">Count</button>
+	</body>
+</html>
