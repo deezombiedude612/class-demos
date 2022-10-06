@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WP Practical 5 Task 3</title>
+	</head>
+	<body>
+		<h1>BMI Calculator</h1>
+		<p>
+			<input type="number" name="input_weight" id="input_weight" placeholder="Enter weight (in kg)." />
+			kg
+		</p>
+		<p>
+			<input type="number" name="input_height" id="input_height" placeholder="Enter height (in m)." />
+			m
+		</p>
+
+		<button id="btn_bmi">Calculate BMI</button>
+
+		<p>
+			<input type="number" name="input_bmi" id="input_bmi" placeholder="BMI" readonly />
+			<input
+				type="text"
+				name="input_interpretation"
+				id="input_interpretation"
+				placeholder="BMI Interpretation"
+				readonly
+			/>
+		</p>
+		<script>
+			function calcBMI() {
+				const WEIGHT = document.querySelector("#input_weight").valueAsNumber;
+				const HEIGHT = document.querySelector("#input_height").valueAsNumber;
+
+				// do not display outputs if anything of the input fields are empty
+				const EMPTY_INPUTS = [NaN, ""];
+				if (EMPTY_INPUTS.includes(WEIGHT) || EMPTY_INPUTS.includes(HEIGHT)) {
+					EMPTY_INPUTS.includes(WEIGHT) && alert("Empty weight!");
+					EMPTY_INPUTS.includes(HEIGHT) && alert("Empty height!");
+					return;
+				}
+
+				if (WEIGHT < 0) {
+					alert("Invalid weight value, cannot be negative!");
+					document.querySelector("#input_weight").value = "";
+					return;
+				}
+				if (HEIGHT <= 0) {
+					alert("Invalid height value, must be positive!");
+					document.querySelector("#input_height").value = "";
+					return;
+				}
+
+				const BMI = WEIGHT / (HEIGHT * HEIGHT);
+				// const BMI = WEIGHT / Math.pow(HEIGHT, 2);
+
+				let interpretation;
+				if (BMI < 18.5) {
+					interpretation = "Underweight";
+				} else if (BMI < 25.0) {
+					interpretation = "Normal";
+				} else if (BMI < 30.0) {
+					interpretation = "Overweight";
+				} else {
+					interpretation = "Obese";
+				}
+
+				document.querySelector("#input_bmi").value = BMI;
+				document.querySelector("#input_interpretation").value = interpretation;
+			}
+
+			document.querySelector("#btn_bmi").addEventListener("click", calcBMI);
+		</script>
+	</body>
+</html>

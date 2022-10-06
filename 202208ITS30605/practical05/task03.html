@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WP Practical 5 Task 3</title>
+	</head>
+	<body>
+		<script>
+			const WEIGHT = parseFloat(prompt("Enter weight (in kg)."));
+			const HEIGHT = parseFloat(prompt("Enter height (in m)."));
+
+			const BMI = WEIGHT / (HEIGHT * HEIGHT);
+			// const BMI = WEIGHT / Math.pow(HEIGHT, 2);
+
+			let interpretation;
+			if (BMI < 18.5) {
+				interpretation = "Underweight";
+			} else if (BMI < 25.0) {
+				interpretation = "Normal";
+			} else if (BMI < 30.0) {
+				interpretation = "Overweight";
+			} else {
+				interpretation = "Obese";
+			}
+
+			alert(`BMI: ${BMI}\n${interpretation}`);
+		</script>
+	</body>
+</html>

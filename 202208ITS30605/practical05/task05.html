@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WP Practical 5 Task 5</title>
+	</head>
+	<body>
+		<script>
+			const MOVIE = {
+				title: "Big Hero 6",
+				releaseYear: 2014,
+				rating: 7.8,
+				director_1: "Don Hall",
+				director_2: "Chris Williams",
+			};
+
+			for (let key in MOVIE) {
+				if (typeof MOVIE[key] === "string") {
+					console.log(key); // prints out key
+				}
+				// console.log(MOVIE[key]); // prints out value
+				// console.log(`${key}: ${MOVIE[key]}`); // prints out value
+			}
+		</script>
+	</body>
+</html>

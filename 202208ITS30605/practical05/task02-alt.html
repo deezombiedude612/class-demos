@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WP Practical 5 Task 2</title>
+
+		<style></style>
+	</head>
+	<body>
+		<p>
+			<input type="number" name="input_year" id="input_year" placeholder="Enter year here" />
+			<button id="execButton">Get Zodiac Animal</button>
+		</p>
+		<input type="text" name="input_animal" id="input_animal" placeholder="Animal display here" readonly />
+
+		<script>
+			function getZodiacAnimal() {
+				const YEAR = document.querySelector("#input_year").valueAsNumber;
+
+				if (YEAR < 0) {
+					alert("Year cannot be negative!");
+					return;
+				}
+
+				const REMAINDER = YEAR % 12;
+
+				let animal = "";
+				switch (REMAINDER) {
+					case 0:
+						animal = "Monkey";
+						break;
+					case 1:
+						animal = "Rooster";
+						break;
+					case 2:
+						animal = "Dog";
+						break;
+					case 3:
+						animal = "Pig";
+						break;
+					case 4:
+						animal = "Rat";
+						break;
+					case 5:
+						animal = "Ox";
+						break;
+					case 6:
+						animal = "Tiger";
+						break;
+					case 7:
+						animal = "Rabbit";
+						break;
+					case 8:
+						animal = "Dragon";
+						break;
+					case 9:
+						animal = "Snake";
+						break;
+					case 10:
+						animal = "Horse";
+						break;
+					case 11:
+						animal = "Sheep";
+						break;
+
+					default:
+				}
+
+				document.querySelector("#input_animal").value = animal;
+			}
+
+			document.querySelector("#execButton").addEventListener("click", getZodiacAnimal);
+		</script>
+	</body>
+</html>
