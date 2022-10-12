@@ -6,3 +6,6 @@ for n in range(1, len(numbers) + 1):
 
 print(f"Original list:\t{numbers}")
 print(f"List squared:\t{squares}")
+
+# Shortcut:
+# print(n ** 2 for n in numbers)
