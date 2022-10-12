@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WP Practical DOM Task 1</title>
+	</head>
+	<body>
+		<p>You can apply for a license to drive when you are 16 years old.</p>
+		<p>To check if you are old enough to drive, input your age and click the button:</p>
+
+		<input type="number" id="ageNow" />
+		<button onclick="checkAgeFunction()">Check now</button>
+
+		<p id="ageCheck"></p>
+
+		<script type="text/javascript">
+			function checkAgeFunction() {
+				/* ---- INSERT CODE HERE ---- */
+				let age = parseInt(document.querySelector("#ageNow").value);
+				let canApply;
+
+				if (typeof age == "number") {
+					if (age >= 16) {
+						canApply = "Eligible for license";
+					} else {
+						canApply = "Not eligible for license";
+					}
+				} else {
+					canApply = "Invalid age!";
+				}
+
+				/* ---- END INSERT CODE ---- */
+
+				document.getElementById("ageCheck").innerHTML = canApply;
+			}
+		</script>
+	</body>
+</html>
