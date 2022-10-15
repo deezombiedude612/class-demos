@@ -43,7 +43,7 @@ public class ChallengeTask03 {
 
 		int sum = sumOfDoubleEvenPlace(number) + sumOfOddPlace(number);
 
-		return sum % 10 == 0;
+		return sum % 10 == 0 && isValidPrefix(number);
 	}
 
 	// Get the result from Step 2
@@ -69,8 +69,8 @@ public class ChallengeTask03 {
 	}
 
 	// Return this number of it is a single digit, otherwise, return the sum of the two digits
-	public static int getDigit(int number) {
-		return (number >= 10) ? (number / 10) + (number % 10) : number;
+	public static int getDigit(int digit) {
+		return (digit >= 10) ? (digit / 10) + (digit % 10) : digit;
 	}
 
 	// Return sum of odd-place digits in number
@@ -85,6 +85,23 @@ public class ChallengeTask03 {
 		} while (number > 0);
 
 		return sum;
+	}
+
+	public static boolean matchPrefix(long number, int prefix) {
+		int prefixFromNumber = (prefix / 10 > 0)
+				? Integer.parseInt("" + String.valueOf(number).charAt(0) + String.valueOf(number).charAt(1))
+				: Integer.parseInt("" + String.valueOf(number).charAt(0));
+
+		return prefixFromNumber == prefix;
+	}
+
+	public static boolean isValidPrefix(long number) {
+		int[] validPrefixArray = { 4, 5, 37, 6 };
+		for (int p: validPrefixArray) {
+			if (matchPrefix(number, p)) return true;
+		}
+
+		return false;
 	}
 
 	/*
