@@ -11,6 +11,7 @@ public class ChallengeTask03 {
 		System.out.println(creditCardNo + " is " + (isValid(creditCardNo) ? "valid" : "invalid"));
 	}
 
+	// Retrieve credit card number
 	public static long getCreditCardNo() {
 		long creditCardNo = 0;
 
@@ -30,14 +31,15 @@ public class ChallengeTask03 {
 		return ((int) (number / 1e13) > 0 && (int) (number / 1e16) == 0);
 	}
 
+	// Returns length of credit card number
 	public static int getCardNumLength(long number) {
 		return String.valueOf(number).length();
 	}
 
 	// Returns true if the card number is valid
 	public static boolean isValid(long number) {
-		System.out.println("Sum of all even-placed single-digit numbers: " + sumOfDoubleEvenPlace(number));
-		System.out.println("Sum of all odd-placed digit numbers: " + sumOfOddPlace(number));
+//		System.out.println("Sum of all even-placed single-digit numbers: " + sumOfDoubleEvenPlace(number));
+//		System.out.println("Sum of all odd-placed digit numbers: " + sumOfOddPlace(number));
 
 		int sum = sumOfDoubleEvenPlace(number) + sumOfOddPlace(number);
 
