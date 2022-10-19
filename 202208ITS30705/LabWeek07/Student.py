@@ -13,7 +13,8 @@ def calculate_cgpa(gpa_list):
 def main():
     """
     We can temporarily declare the variable named "lines" before it is assigned 
-    to the contents of the text file.
+    to the contents of the text file. That way, we don't really need to have the 
+    text file open for too long beyond what's needed.
     """
     lines = ""
 
