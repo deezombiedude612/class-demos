@@ -22,15 +22,14 @@ def main():
                 total_c += int(split_line[0])
                 count_c += 1
 
-        avg_a = total_a / count_a
-        avg_b = total_b / count_b
-        avg_c = total_c / count_c
-
         if count_a != 0:
+            avg_a = total_a / count_a
             print(f"Average mark for A: {'{:.2f}'.format(avg_a)}")
         if count_b != 0:
+            avg_b = total_b / count_b
             print(f"Average mark for B: {'{:.2f}'.format(avg_b)}")
         if count_c != 0:
+            avg_c = total_c / count_c
             print(f"Average mark for C: {'{:.2f}'.format(avg_c)}")
 
 
