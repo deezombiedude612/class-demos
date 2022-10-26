@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+:root {
+	--table-cell-dimension: 100px;
+	--text-size: 32px;
+}
+
+* {
+	font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+	padding-top: 2rem;
+	text-align: center;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+#num_entry,
+#num_entry input[type="number"] {
+	font-size: var(--text-size);
+	margin-bottom: 1rem;
+}
+
+#num_entry input[type="number"] {
+	text-align: center;
+	width: var(--table-cell-dimension);
+}
+
+input[type="number"]:disabled {
+	background-color: white;
+	border: 2px solid black;
+	cursor: not-allowed;
+}
+
+/* For Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* For Firefox */
+input[type=number]{
+	-moz-appearance: textfield;
+}
+
+input[type="button"] {
+	font-size: 20px;
+	padding: 0.5rem 1rem;
+}
+
+hr {
+	margin: 2rem 0;
+}
+
+table#multiplication-box {
+	/* border: 1px solid black; */
+	border-collapse: collapse;
+	display: inline-block;
+	margin-left: auto;
+}
+
+table#multiplication-box th,
+table#multiplication-box td:not(.td-hidden) {
+	border: 1px solid black;
+	font-size: var(--text-size);
+	height: var(--table-cell-dimension);
+	width: var(--table-cell-dimension);
+}

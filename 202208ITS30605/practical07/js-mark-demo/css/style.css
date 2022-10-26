@@ -1,0 +1,36 @@
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("../fonts/SF-Pro-Display-Regular.otf");
+}
+
+* {
+	font-family: "SF Pro Display", sans-serif;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+hr {
+	margin: 2rem 0;
+}
+
+button {
+	background-color: transparent;
+	border-radius: 1rem;
+	font-size: 24px;
+	padding: .5rem 1rem;
+}
+
+button:hover {
+	box-shadow: 0 0 1rem yellowgreen, 0 0 5rem lemonchiffon;
+	cursor: pointer;
+}
+
+button:active {
+	background-color: lemonchiffon;
+}
+
+.text-center {
+	text-align: center;
+}

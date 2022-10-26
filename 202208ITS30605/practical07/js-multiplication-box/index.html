@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Multiplication Box</title>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>Multiplication Box</h1>
+
+		<p>Multiplies 2-digit numbers together.</p>
+
+		<section id="num_entry">
+			<input type="number" name="num1" id="num1" min="10" max="99" />
+			&times;
+			<input type="number" name="num2" id="num2" min="10" max="99" />
+			=
+			<input type="number" name="answer" id="numAns" min="10" max="99" readonly />
+		</section>
+		<!-- /section#num_entry -->
+
+		<input type="button" value="Multiply" onclick="multiply();" />
+
+		<hr />
+
+		<table id="multiplication-box">
+			<tr>
+				<td class="td-hidden"></td>
+				<td class="td-hidden"></td>
+				<th id="num1_show" colspan="2"></th>
+			</tr>
+			<tr>
+				<td class="td-hidden"></td>
+				<th>&times;</th>
+				<th id="num1a"></th>
+				<th id="num1b"></th>
+			</tr>
+			<tr>
+				<th id="num2_show" rowspan="2"></th>
+				<th id="num2a"></th>
+				<td id="m1"></td>
+				<td id="m2"></td>
+				<td id="m1_m2"></td>
+			</tr>
+			<tr>
+				<th id="num2b"></th>
+				<td id="m3"></td>
+				<td id="m4"></td>
+				<td id="m3_m4"></td>
+			</tr>
+			<tr>
+				<td class="td-hidden" colspan="2"></td>
+				<td id="m1_m3"></td>
+				<td id="m2_m4"></td>
+				<th id="m_total"></th>
+			</tr>
+		</table>
+
+		<!-- /table#multiplication-box -->
+
+		<script src="times-box.js"></script>
+	</body>
+</html>
