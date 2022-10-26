@@ -1,0 +1,16 @@
+table {
+	border-collapse: collapse;
+	width: 250px;
+}
+
+tr,
+th,
+td {
+	border: 1px solid black;
+}
+
+input[type="text"],
+input[type="email"] {
+	margin-bottom: 1rem;
+	width: 250px;
+}
