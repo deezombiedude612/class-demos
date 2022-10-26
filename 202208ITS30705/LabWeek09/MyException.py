@@ -8,12 +8,18 @@ def main():
     filename = "data.txt"
 
     try:
+        lines = ""
+
         with open(filename) as file:
-            pass
-    except Exception as ex:
-        print(f"Exception caught: {type(ex).__name__}")
-        print(ex.args[0])
+            lines = file.readlines()
+
+        for l in lines:
+            print(l, end="")
+    except FileNotFoundError as ex:
         print(f"{filename} does not exist.")
+    except Exception as ex:
+        print(f"Unprecedented exception caught: {type(ex).__name__}")
+        print(ex.args[0])
 
 
 if __name__ == "__main__":
