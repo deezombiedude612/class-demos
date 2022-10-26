@@ -1,0 +1,29 @@
+* {
+	background-color: cornsilk;
+}
+
+#example {
+	background-color: burlywood;
+	padding: 50px;
+}
+
+#example h1 {
+	text-align: center;
+	background-color: aquamarine;
+}
+
+#example p {
+	font-style: italic;
+}
+
+#button-area {
+	text-align: center;
+}
+
+button {
+	border: 1px solid black;
+}
+
+button:hover {
+	box-shadow: 0 0 1rem yellow, 0 0 5rem yellow;
+}

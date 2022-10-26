@@ -1,0 +1,32 @@
+@import "variables";
+
+* {
+	background-color: cornsilk;
+}
+
+#example {
+	background-color: burlywood;
+	padding: 50px;
+
+	h1 {
+		text-align: $text-alignment;
+		background-color: aquamarine;
+	}
+
+	p {
+		font-style: italic;
+	}
+}
+
+#button-area {
+	text-align: $text-alignment;
+}
+
+button {
+	border: 1px solid black;
+
+	&:hover {
+		box-shadow: 0 0 1rem $hover_color, 0 0 5rem $hover_color;
+	}
+}
+
