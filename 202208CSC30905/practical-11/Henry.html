@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Practical 11: Exercise</title>
+
+		<link rel="stylesheet" href="Henry.css" />
+	</head>
+	<body>
+		<div class="text-center pt-4" id="myImage">
+			<img src="what.png" alt="Is this me?" />
+
+			<p>Name: <span>Henry</span></p>
+			<div>
+				<p>Student ID: <span>110358</span></p>
+			</div>
+		</div>
+
+		<div>
+			<table>
+				<tr>
+					<th colspan="2">Personal Information</th>
+				</tr>
+				<tr>
+					<td>Nickname</td>
+					<td>
+						<input type="text" name="nickname" id="input_nickname" />
+					</td>
+				</tr>
+				<tr>
+					<td>Address</td>
+					<td>
+						<textarea name="address" id="textarea_address" cols="30" rows="4"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>Age</td>
+					<td>
+						<select name="age" id="select_age">
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">More than 20</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Gender</td>
+					<td>
+						<input type="radio" name="gender" id="radio_male" />
+						<label for="radio_male">Male</label>
+						<input type="radio" name="gender" id="radio_female" />
+						<label for="radio_female">Female</label>
+					</td>
+				</tr>
+				<tr>
+					<td>Favorite Sport(s)</td>
+					<td>
+						<input type="checkbox" name="check_sport1" id="check_sport1" />
+						<label for="check_sport1">Basketball</label><br />
+						<input type="checkbox" name="check_sport2" id="check_sport2" />
+						<label for="check_sport2">Volleyball</label><br />
+						<input type="checkbox" name="check_sport3" id="check_sport3" />
+						<label for="check_sport3">Badminton</label><br />
+						<input type="checkbox" name="check_sport4" id="check_sport4" />
+						<label for="check_sport4">Competitive Coding</label><br />
+						<input type="checkbox" name="check_sport5" id="check_sport5" />
+						<label for="check_sport5">Hockey</label>
+					</td>
+				</tr>
+				<tr>
+					<td>Insert your Favorite Pet Photo</td>
+					<td>
+						<input type="file" name="pet_photo" id="input_pet_photo" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="button" value="Click Me" />
+						<input type="submit" value="Submit" />
+						<input type="reset" value="Reset" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+body {
+	font-family: "Open Sans", sans-serif;
+}
+
+div {
+	text-align: center;
+}
+
+img {
+	width: 50%;
+}
+
+table,
+th,
+td {
+	border: 1px solid black;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 0 auto;
+	width: 75%;
+}
+
+th,
+td {
+	padding: 10px;
+}
+
+/* 
+:not() narrows down selection to not include anything with a certain class, id or attribute
+:first-of-type selects first occurrence of selected element
+:last-of-type selects last occurrence of selected element
+*/
+tr:not(:first-of-type):not(:last-of-type) {
+	background-color: lightgoldenrodyellow;
+	text-align: left;
+}
+
+tr:first-of-type {
+	background-color: lightblue;
+	color: darkgreen;
+	font-size: 24pt;
+}
+
+tr:last-of-type {
+	background-color: lightblue;
+}
+
+tr td {
+	width: 50%;
+}
+
+/* #myImage {
+	font-family: "Open Sans", sans-serif;
+} */
+
+#myImage span {
+	font-weight: bold;
+}

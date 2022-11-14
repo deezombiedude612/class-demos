@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Practical 11: Exercise</title>
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+			crossorigin="anonymous"
+		/>
+		<!-- <link rel="stylesheet" href="Henry.css" /> -->
+	</head>
+	<body>
+		<div class="text-center pt-4" id="myImage">
+			<img class="w-75" src="what.png" alt="Is this me?" />
+
+			<p>Name: <span class="fw-bold">Henry</span></p>
+			<div>
+				<p>Student ID: <span class="fw-bold">110358</span></p>
+			</div>
+		</div>
+
+		<div>
+			<table class="table table-bordered table-hover w-75 mx-auto">
+				<tr class="text-center">
+					<th class="table-dark" colspan="2">Personal Information</th>
+				</tr>
+				<tr>
+					<td class="w-50">Nickname</td>
+					<td class="w-50">
+						<input class="form-control" type="text" name="nickname" id="input_nickname" />
+					</td>
+				</tr>
+				<tr>
+					<td>Address</td>
+					<td>
+						<textarea class="form-control" name="address" id="textarea_address" cols="30" rows="4"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>Age</td>
+					<td>
+						<select class="form-select" name="age" id="select_age">
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">More than 20</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Gender</td>
+					<td>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="gender" id="radio_male" />
+							<label class="form-check-label" for="radio_male">Male</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" name="gender" id="radio_female" />
+							<label class="form-check-label" for="radio_female">Female</label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Favorite Sport(s)</td>
+					<td>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" name="check_sport1" id="check_sport1" />
+							<label class="form-check-label" for="check_sport1">Basketball</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" name="check_sport2" id="check_sport2" />
+							<label class="form-check-label" for="check_sport2">Volleyball</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" name="check_sport3" id="check_sport3" />
+							<label class="form-check-label" for="check_sport3">Badminton</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" name="check_sport4" id="check_sport4" />
+							<label class="form-check-label" for="check_sport4">Competitive Coding</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" name="check_sport5" id="check_sport5" />
+							<label class="form-check-label" for="check_sport5">Hockey</label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label class="form-label" for="input_pet_photo">
+							Insert your Favorite Pet Photo
+						</label>
+					</td>
+					<td>
+						<input class="form-control" type="file" name="pet_photo" id="input_pet_photo" />
+					</td>
+				</tr>
+				<tr>
+					<td class="text-center" colspan="2">
+						<input class="btn btn-outline-primary" type="button" value="Click Me" />
+						<input class="btn btn-outline-success" type="submit" value="Submit" />
+						<input class="btn btn-outline-danger" type="reset" value="Reset" />
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
