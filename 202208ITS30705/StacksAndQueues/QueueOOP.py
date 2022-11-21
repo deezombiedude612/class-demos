@@ -4,8 +4,16 @@ class Queue:
     def __init__(self):
         self.__queue = []
 
-    def display(self):
-        print(self.__queue)
+    def __repr__(self):
+        if self.size() > 1:
+            repr_output = f"{self.__queue[0]}"
+            # repr_output = "(FRONT) "
+            for elem in self.__queue[1:]:
+                repr_output += f" {elem}"
+            # repr_output += "(BACK)"
+            return repr_output
+
+        return ""
 
     def size(self):
         return len(self.__queue)
@@ -29,54 +37,56 @@ class Queue:
 
 def main():
     my_queue = Queue()
-    my_queue.display()
+    print(my_queue)
     print(f"Is queue empty? {my_queue.is_empty()}")
 
     my_queue.enqueue("UP")
-    my_queue.display()
+    print(my_queue)
     my_queue.enqueue("UP")
-    my_queue.display()
+    print(my_queue)
     my_queue.enqueue("DOWN")
-    my_queue.display()
+    print(my_queue)
     my_queue.enqueue("DOWN")
-    my_queue.display()
+    print(my_queue)
     my_queue.enqueue("LEFT")
-    my_queue.display()
+    print(my_queue)
     my_queue.enqueue("RIGHT")
-    my_queue.display()
+    print(my_queue)
     my_queue.enqueue("LEFT")
-    my_queue.display()
+    print(my_queue)
     my_queue.enqueue("RIGHT")
-    my_queue.display()
+    print(my_queue)
     my_queue.enqueue("B")
-    my_queue.display()
+    print(my_queue)
     my_queue.enqueue("A")
-    my_queue.display()
+    print(my_queue)
     print(f"Length of queue: {my_queue.size()}")
     print(f"Is queue empty? {my_queue.is_empty()}")
 
     print(f"Popped: {my_queue.dequeue()}")
-    my_queue.display()
+    print(my_queue)
     print(f"Popped: {my_queue.dequeue()}")
-    my_queue.display()
+    print(my_queue)
     print(f"Popped: {my_queue.dequeue()}")
-    my_queue.display()
+    print(my_queue)
     print(f"Popped: {my_queue.dequeue()}")
-    my_queue.display()
+    print(my_queue)
     print(f"Popped: {my_queue.dequeue()}")
-    my_queue.display()
+    print(my_queue)
     print(f"Popped: {my_queue.dequeue()}")
-    my_queue.display()
+    print(my_queue)
     print(f"Popped: {my_queue.dequeue()}")
-    my_queue.display()
+    print(my_queue)
     print(f"Popped: {my_queue.dequeue()}")
-    my_queue.display()
+    print(my_queue)
     print(f"Popped: {my_queue.dequeue()}")
-    my_queue.display()
+    print(my_queue)
     print(f"Popped: {my_queue.dequeue()}")
-    my_queue.display()
+    print(my_queue)
     print(f"Popped: {my_queue.dequeue()}")
-    my_queue.display()
+    print(my_queue)
+
+    pass
 
 
 if __name__ == "__main__":
