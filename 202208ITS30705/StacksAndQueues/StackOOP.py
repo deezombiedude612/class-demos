@@ -4,8 +4,12 @@ class Stack:
     def __init__(self):
         self.__stack = []
 
-    def display(self):
-        print(self.__stack)
+    def __repr__(self):
+        repr_output = ""
+        for elem in self.__stack:
+            repr_output += f"{elem} "
+        repr_output += "TOP"
+        return repr_output
 
     def size(self):
         return len(self.__stack)
@@ -35,35 +39,35 @@ class Stack:
 
 def main():
     my_stack = Stack()
-    my_stack.display()
+    print(my_stack)
     my_stack.peek()
 
     my_stack.push(35)
-    my_stack.display()
+    print(my_stack)
     my_stack.push(42)
-    my_stack.display()
+    print(my_stack)
     my_stack.push(49)
-    my_stack.display()
+    print(my_stack)
     my_stack.push(56)
-    my_stack.display()
+    print(my_stack)
     print(f"Size of stack: {my_stack.size()}")
 
     my_stack.peek()
 
     print(f"Popped: {my_stack.pop()}")
-    my_stack.display()
+    print(my_stack)
     print(f"Size of stack: {my_stack.size()}")
     print(f"Popped: {my_stack.pop()}")
-    my_stack.display()
+    print(my_stack)
     print(f"Size of stack: {my_stack.size()}")
     print(f"Popped: {my_stack.pop()}")
-    my_stack.display()
+    print(my_stack)
     print(f"Size of stack: {my_stack.size()}")
     print(f"Popped: {my_stack.pop()}")
-    my_stack.display()
+    print(my_stack)
     print(f"Size of stack: {my_stack.size()}")
     print(f"Popped: {my_stack.pop()}")
-    my_stack.display()
+    print(my_stack)
     print(f"Size of stack: {my_stack.size()}")
 
 
