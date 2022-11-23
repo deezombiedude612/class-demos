@@ -10,15 +10,23 @@ $age = $_POST["age"];
 $email = $_POST["email"];
 $active = $_POST["active"];
 
-$sql = "INSERT INTO `Student` (`first_name`, `last_name`, `age`, `email`, `active`) VALUES
-('" . $first_name . "', '" . $last_name . "', " . $age . ", '" . $email . "', " . $active . ");";
+if ($age <= 0) {
+	echo "<script>
+	alert('Invalid age, must be positive!');
+	window.location.href = 'add-student.php';
+	</script>";
+} else {
 
-echo $sql;
+	$sql = "INSERT INTO `Student` (`first_name`, `last_name`, `age`, `email`, `active`) VALUES 
+	('" . $first_name . "', '" . $last_name . "', " . $age . ", '" . $email . "', " . $active . ");";
 
-// Run the SQL statement
-if ($conn->query($sql)) {
-	echo "Inserted new record successfully";
+	// echo $sql;
 
-	// Redirect to index.php after successful entry
-	header("Location: index.php");
-} else echo "Error inserting record: " . $conn->error;
+	// Run the SQL statement
+	if ($conn->query($sql)) {
+		echo "Inserted new record successfully";
+
+		// Redirect to index.php after successful entry
+		header("Location: index.php");
+	} else echo "Error inserting record: " . $conn->error;
+}

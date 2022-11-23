@@ -23,6 +23,13 @@ require "db-connect.php";
 		}
 
 		</style>
+
+		<script>
+		function confirmDelete(id) {
+			const CONFIRM_RESULT = confirm(`Do you wish to delete record #${id}?`);
+			if (CONFIRM_RESULT) window.location.href = `delete-student.php?id=${id}`;
+		}
+		</script>
 	</head>
 
 	<body>
@@ -43,6 +50,7 @@ require "db-connect.php";
 				<th>Age</th>
 				<th>Email</th>
 				<th>Active</th>
+				<th>Actions</th>
 			</tr>
 			<?php
 				while ($row = $result->fetch_assoc()) {
@@ -53,7 +61,11 @@ require "db-connect.php";
 				<td><?= $row["last_name"]; ?></td>
 				<td><?= $row["age"]; ?></td>
 				<td><?= $row["email"]; ?></td>
-				<td><?= $row["active"]; ?></td>
+				<td><?= $row["active"] == 1 ? "Yes" : "No"; ?></td>
+				<td>
+					<button onclick="window.location.href='update-student.php?id=<?= $row['id']; ?>';">Update</button>
+					<button onclick="confirmDelete(<?= $row['id']; ?>)">Delete</button>
+				</td>
 			</tr>
 			<?php
 				}
@@ -63,6 +75,8 @@ require "db-connect.php";
 		} else echo "No data found.";				// $result->num_rows = 0 (no rows of results are retrieved)
 	} else echo "Error retrieving results: " . $conn->error; // database selection query not successful
 	?>
+
+		<p><button onclick="window.location.href='add-student.php'">Add Student</button></p>
 	</body>
 
 </html>
