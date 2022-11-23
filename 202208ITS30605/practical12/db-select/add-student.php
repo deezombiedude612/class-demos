@@ -13,23 +13,23 @@
 
 		<form action="add-to-db.php" method="post">
 			<p>
-				First Name
+				<label for="first_name">First Name</label>
 				<input type="text" name="first_name" id="first_name" required>
 			</p>
 			<p>
-				Last Name
+				<label for="last_name">Last Name</label>
 				<input type="text" name="last_name" id="last_name" required>
 			</p>
 			<p>
-				Age
+				<label for="age">Age</label>
 				<input type="number" name="age" id="age" required>
 			</p>
 			<p>
-				Email
+				<label for="email">Email</label>
 				<input type="email" name="email" id="email" required>
 			</p>
 			<p>
-				Active?
+				<label for="active">Active?</label>
 				<input type="radio" name="active" value="1" id="active-yes" checked> Yes
 				<input type="radio" name="active" value="0" id="active-no"> No
 			</p>

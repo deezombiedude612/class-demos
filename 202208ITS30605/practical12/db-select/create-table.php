@@ -1,6 +1,6 @@
 <?php
-/* copy PHP code from DBConnection.php, or include it as follows: */
-require "DBConnection.php"; 	//DBConnection.phpistreatedlikeanattachment
+/* copy PHP code from db-connect.php, or include it as follows: */
+require "db-connect.php"; 	// db-connect.php is treated like an attachment
 
 $sql = "CREATE TABLE IF NOT EXISTS `Student` (
 	`id`                INT NOT NULL AUTO_INCREMENT,
